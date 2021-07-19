@@ -53,15 +53,15 @@ public class Login_control implements Serializable {
 		return redireccion;
 	}
 
-	public void verificacion() {
-		try {
-			Usuario us= (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
-			if (us==null) {
-				FacesContext.getCurrentInstance().getExternalContext().redirect("reg_user.jsf");
-			} 
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-	}
+//	public void verificacion() {
+//		try {
+//			Usuario us= (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
+//			if (us==null) {
+//				FacesContext.getCurrentInstance().getExternalContext().redirect("reg_user.jsf");
+//			} 
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//	}
 }
 
