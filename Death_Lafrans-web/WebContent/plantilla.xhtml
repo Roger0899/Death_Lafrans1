@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>------------</title>
+	<h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
+	<h:outputStylesheet library="CSS" name="regis.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+<div class="enca">
+	<div class="logo">
+        <img src="img/logo_1.png" class="img_logo" alt="proximamente"/>
+        <h1>Death Lafrans</h1>
+    </div>
+	 <div class="card2">
+        <h:form>
+            <p:growl id="messages"/>
+            <p:menubar>
+                <p:menuitem value="Inicio" outcome="index.xhtml"/>
+                <p:menuitem value="Razón de ser" outcome="mision_vision.xhtml"/>
+                <p:menuitem value="Encargados" outcome="encargados.xhtml"/>
+                <p:menuitem value="Contactos" outcome="contactos.xhtml"/>
+	            <f:facet name="options">
+	                <p:button value="login" icon="/img/login.png" styleClass="ui-button-info" outcome="login.xhtml"/>
+	            </f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+</div>
+<div class="cuerpo">
+	
+</div>
+<div class="pie">
+	<h:form>
+		<p:stack icon="/img/stack.png" expanded="true">
+			<p:menuitem value="Githab" icon="/img/githab.png" url="https://github.com/Roger0899/Proyecto-Integrador"/>
+		</p:stack>
+	</h:form>
+</div>
+</h:body>
+</html>

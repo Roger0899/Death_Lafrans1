@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>BIENVENIDO</title>
+    <h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
+    <h:outputStylesheet library="CSS" name="index.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+    <div class="logo">
+        <img src="img/logo_1.png" class="img_logo" alt="proximamente"/>
+        <h1>Death Lafrans</h1>
+    </div>
+    <div class="card">
+        <h:form>
+            <p:growl id="messages"/>
+            <p:menubar>
+                <p:menuitem value="Inicio" outcome="index.xhtml"/>
+                <p:menuitem value="Razón de ser" outcome="mision_vision.xhtml"/>
+                <p:menuitem value="Encargados" outcome="encargados.xhtml"/>
+                <p:menuitem value="Contactos" outcome="contactos.xhtml"/>
+	            <f:facet name="options">
+	                <p:button value="login" icon="/img/login.png" styleClass="ui-button-info" outcome="login.xhtml"/>
+	            </f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+    <div class="ind">
+        <h1>ENFERMEDADES QUE CAUSAN LA MUERTE EN FRANCIA</h1>
+        <div class="card">
+            <h:form>
+                <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true"/>
+                <br/><br/>
+                <p:fieldset legend="Leucemia" toggleable="true" toggleSpeed="500">
+                    <p:ajax event="toggle" listener="#{fieldsetView.handleToggle}" update="msgs"/>
+					<p class="p-m-0">
+						La leucemia es el cáncer de los tejidos que forman la sangre en el organismo, incluso la médula ósea y el sistema linfático.
+						Existen muchos tipos de leucemia. Algunas formas de leucemia son más frecuentes en niños. Otras tienen lugar, principalmente, en adultos.<br/><br/>
+						La leucemia, por lo general, involucra a los glóbulos blancos. Los glóbulos blancos son poderosos combatientes de infecciones; por lo general,
+						crecen y se dividen de manera organizada, a medida que el cuerpo los necesita. Pero en las personas que tienen leucemia, la médula ósea produce
+						una cantidad excesiva de glóbulos blancos anormales que no funcionan correctamente.<br/><br/>
+						El tratamiento para la leucemia puede ser complejo, según el tipo de leucemia y según otros factores. Pero existen estrategias y recursos que
+						pueden ayudar a hacer que el tratamiento sea exitoso.<br/>
+						
+						<h2>Síntomas</h2>
+						
+						<ul>
+							<li>Fiebre o escalofríos</li>
+							<li>Fatiga persistente, debilidad</li>
+							<li>Infecciones frecuentes o graves</li>
+							<li>Pérdida de peso sin intentarlo</li>
+							<li>Ganglios linfáticos inflamados, agrandamiento del hígado o del bazo</li>
+							<li>Sangrado y formación de hematomas con facilidad</li>
+							<li>Sangrados nasales recurrentes</li>
+							<li>Pequeñas manchas rojas en la piel (petequia)</li>
+							<li>Hiperhidrosis, sobre todo por la noche</li>
+							<li>Dolor o sensibilidad en los huesos</li>
+						</ul>
+					</p>
+                </p:fieldset>
+                <br/><br/>
+                <p:fieldset legend="Isquémicas Del Corazón" toggleable="true" toggleSpeed="500">
+                    <p:ajax event="toggle" listener="#{fieldsetView.handleToggle}" update="msgs"/>
+					<p class="p-m-0">
+						La isquemia miocárdica ocurre cuando el flujo sanguíneo al corazón se reduce, lo que impide que el músculo cardíaco reciba suficiente oxígeno.
+						La reducción del flujo sanguíneo generalmente se produce debido a una obstrucción parcial o total de las arterias del corazón (arterias coronarias).<br/><br/>
+						La isquemia miocárdica, también llamada isquemia cardíaca, reduce la capacidad del músculo cardíaco de bombear sangre. Una obstrucción
+						repentina y grave de una de las arterias del corazón puede provocar un ataque cardíaco. La isquemia miocárdica también puede provocar ritmos
+						cardíacos anormales graves.<br/><br/>
+						El tratamiento para la isquemia miocárdica implica mejorar el flujo sanguíneo al músculo cardíaco. El tratamiento puede incluir medicamentos,
+						un procedimiento para abrir las arterias bloqueadas (angioplastia) o cirugía de bypass.	Elegir un estilo de vida saludable es importante para
+						tratar y prevenir la isquemia miocárdica.
+						<h2>Síntomas</h2>
+						<ul>
+							<li>Dolor de cuello o de mandíbula</li>
+							<li>Dolor de brazo o de hombro</li>
+							<li>Un latido del corazón rápido</li>
+							<li>Dificultad para respirar cuando estás físicamente activo</li>
+							<li>Náuseas y vómitos</li>
+							<li>Sudoración</li>
+							<li>Fatiga</li>
+						</ul>
+					</p>
+                </p:fieldset>
+                <br/><br/>
+                <p:fieldset legend="Neumonía" toggleable="true" toggleSpeed="500">
+                    <p:ajax event="toggle" listener="#{fieldsetView.handleToggle}" update="msgs"/>
+					<p class="p-m-0">
+						La neumonía es una infección que inflama los sacos aéreos de uno o ambos pulmones. Los sacos aéreos se pueden llenar de líquido o pus (material
+						purulento), lo que provoca tos con flema o pus, fiebre, escalofríos y dificultad para respirar. Diversos microrganismos, como bacterias, virus y
+						hongos, pueden provocar neumonía.<br/><br/>
+						La neumonía puede variar en gravedad desde suave a potencialmente mortal. Es más grave en bebés y niños pequeños, personas mayores a 65 años, y
+						personas con problemas de salud o sistemas inmunitarios debilitados.
+						<h2>Síntomas</h2>
+						Los signos y síntomas de la neumonía varían de moderados a graves y dependen de varios factores, como el tipo de germen que causó la
+						infección, tu edad y tu salud en general. Los signos y síntomas moderados suelen ser similares a los de un resfrío o una gripe, pero duran más
+						tiempo.
+					
+						Los signos y síntomas de la neumonía pueden incluir lo siguiente:
+						<ul>
+							<li>Dolor en el pecho al respirar o toser</li>
+							<li>Desorientación o cambios de percepción mental (en adultos de 65 años o más)</li>
+							<li>Tos que puede producir flema</li>
+							<li>Fatiga</li>
+							<li>Fiebre, transpiración y escalofríos con temblor</li>
+							<li>Temperatura corporal más baja de lo normal (en adultos mayores de 65 años y personas con un sistema inmunitario débil)</li>
+							<li>Náuseas, vómitos o diarrea</li>
+							<li>Dificultad para respirar</li>
+						</ul>
+					</p>
+                </p:fieldset>
+                <br/><br/>
+                <p:fieldset legend="Hepatitis Viral" toggleable="true" toggleSpeed="500">
+                    <p:ajax event="toggle" listener="#{fieldsetView.handleToggle}" update="msgs"/>
+					<p class="p-m-0">
+						La hepatitis A es una infección del hígado sumamente contagiosa causada por el virus de la hepatitis A. Es uno de varios tipos de virus de
+						hepatitis que causa inflamación y afecta al funcionamiento del hígado.<br/><br/>
+					
+						Es probable que contraigas hepatitis A por ingerir alimentos o agua contaminados, o por el contacto directo con personas u objetos infectados.
+						Los casos leves de hepatitis A no necesitan tratamiento. La mayoría de las personas infectadas se recuperan por completo sin daños permanentes
+						en el hígado.<br/><br/>
+					
+						Una de las mejores maneras de protegerse contra la hepatitis A es practicar una buena higiene, como lavarse las manos con frecuencia. Las
+						personas con mayor riesgo pueden aplicarse la vacuna.
+						<h2>Síntomas</h2>
+						Los signos y síntomas de la hepatitis A, generalmente, aparecen después de haber tenido el virus durante algunas semanas. Sin embargo, no
+						todas las personas con hepatitis A los manifiestan. Los signos y síntomas, si los presentas, pueden comprender los siguientes:
+						<ul>
+							<li>Fatiga</li>
+							<li>Náuseas y vómitos repentinos</li>
+							<li>Dolor o malestar abdominal, especialmente en la parte superior derecha debajo de las costillas inferiores (en la zona del hígado)</li>
+							<li>Evacuaciones intestinales de color arcilla</li>
+							<li>Pérdida de apetito</li>
+							<li>Poca fiebre</li>
+							<li>Orina de color oscuro</li>
+							<li>Dolor articular</li>
+							<li>Color amarillento en la piel y en la parte blanca de los ojos (ictericia)</li>
+							<li>Picazón intensa</li>
+						</ul>
+					</p>
+                </p:fieldset>
+
+                <br/><br/>
+                <p:fieldset legend="Demencia" toggleable="true" toggleSpeed="500">
+                    <p:ajax event="toggle" listener="#{fieldsetView.handleToggle}" update="msgs"/>
+					<p class="p-m-0">
+						La demencia describe un grupo de síntomas que afectan la memoria, el pensamiento y las habilidades sociales lo suficientemente graves como
+						para interferir en tu vida diaria. No se trata de una enfermedad específica, hay varias enfermedades que pueden provocar demencia.
+						<br/><br/>
+						Aunque la demencia generalmente implica pérdida de memoria, hay varias causas de pérdida de memoria. El hecho de padecer pérdida de memoria
+						no significa que tengas demencia.
+						<br/><br/>
+						La enfermedad de Alzheimer es la causa más común de demencia progresiva en adultos mayores, pero existen varias causas de demencia.
+						Dependiendo de la causa, algunos síntomas de demencia pueden ser reversibles.
+						<h2>Síntomas</h2>
+						<h5>Cambios cognitivos</h5>
+						<ul>
+							<li>Pérdida de la memoria, que generalmente es notada por el cónyuge o por otra persona</li>
+							<li>Dificultad para comunicarse o encontrar palabras</li>
+							<li>Dificultad con las habilidades visuales y espaciales, como perderse mientras se conduce</li>
+							<li>Dificultad para razonar o para resolver problemas</li>
+							<li>Dificultad para manejar tareas complejas</li>
+							<li>Dificultad para planificar y organizar</li>
+							<li>Dificultad con la coordinación y las funciones motoras</li>
+							<li>Confusión y desorientación</li>
+						</ul>
+						<h5>Cambios psicológicos</h5>
+						<ul>
+							<li>Cambios en la personalidad</li>
+							<li>Depresión</li>
+							<li>ansiedad</li>
+							<li>Comportamiento inapropiado</li>
+							<li>Paranoia</li>
+							<li>Agitación</li>
+							<li>Alucinaciones</li>
+						</ul>
+					</p>
+                </p:fieldset>
+            </h:form>
+        </div>
+
+        <h:form>
+            <p:stack icon="/img/stack.png" expanded="true">
+                <p:menuitem value="Githab" icon="/img/githab.png" url="https://github.com/Roger0899/Proyecto-Integrador"/>
+            </p:stack>
+        </h:form>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Inicio de Sesion</title>
+	<h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
+	<h:outputStylesheet library="CSS" name="regis.css"></h:outputStylesheet>
+	
+</h:head>
+<h:body>
+	<div class="logo">
+        <img src="img/logo_1.png" class="img_logo" alt="proximamente"/>
+        <h1>Death Lafrans</h1>
+    </div>
+	 <div class="card2">
+        <h:form>
+            <p:growl id="messages"/>
+            <p:menubar>
+                <p:menuitem value="Inicio" outcome="index.xhtml"/>
+                <p:menuitem value="Razón de ser" outcome="mision_vision.xhtml"/>
+                <p:menuitem value="Encargados" outcome="encargados.xhtml"/>
+                <p:menuitem value="Contactos" outcome="contactos.xhtml"/>
+	            <f:facet name="options">
+	                <p:button value="Registrarse" icon="/img/login.png" styleClass="ui-button-info" outcome="reg_user.xhtml"/>
+	            </f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+	<div class="card">
+	    <h:form styleClass="fro">
+	    	<p:messages autoUpdate="true" showDetail="true"/>
+			<h1>Inicio de Sesion</h1>
+	        <h:panelGrid columns="3" cellpadding="7" styleClass="p-mb-3 tabla">
+				<p:outputLabel for="correo" value="Correo:"/>
+				<p:inputText id="correo" label="Correo" required="true" requiredMessage="El campo es obligatorio" value="#{loginn.user.correo}">
+					<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" validateRequired="Debe ser un correo válido"/>
+				</p:inputText>
+				<p:message for="correo"/>
+				
+				<p:outputLabel for="pass" value="Contraseña:"/>
+				<p:inputText id="pass" label="pass" required="true" requiredMessage="El campo es obligatorio" value="#{loginn.user.clave}">
+					<f:validateLength minimum="8"/>
+				</p:inputText>
+				<p:message for="pass"/>
+	        </h:panelGrid>
+			<div>
+		        <p:commandButton value="Iniciar" icon="ui-icon-key" action="#{loginn.iniciarSesion()}"/>
+		        <p:commandButton type="reset" value="Restablecer"/>
+			</div>
+	    </h:form>
+	</div>
+        <h:form>
+            <p:stack icon="/img/stack.png" expanded="true">
+                <p:menuitem value="Githab" icon="/img/githab.png" url="https://github.com/Roger0899/Proyecto-Integrador"/>
+            </p:stack>
+        </h:form>
+</h:body>
+</html>

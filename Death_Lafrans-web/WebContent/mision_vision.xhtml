@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>MISIÓN, VISIÓN Y VALORES</title>
+	<h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
+	<h:outputStylesheet library="CSS" name="mi_vi.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+    <div class="logo">
+        <img src="img/logo_1.png" class="img_logo" alt="proximamente"/>
+        <h1>Death Lafrans</h1>
+    </div>
+    <div class="card">
+        <h:form>
+            <p:growl id="messages"/>
+            <p:menubar>
+                <p:menuitem value="Inicio" outcome="index.xhtml"/>
+                <p:menuitem value="Razón de ser" outcome="mision_vision.xhtml"/>
+                <p:menuitem value="Encargados" outcome="encargados.xhtml"/>
+                <p:menuitem value="Contactos" outcome="contactos.xhtml"/>
+	            <f:facet name="options">
+	                <p:button value="login" icon="/img/login.png" styleClass="ui-button-info" outcome="login.xhtml"/>
+	            </f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+	<div class="razon">
+		<h1>Razón de ser</h1>
+		<h2>Misión</h2>
+		<p>Contribuir a la nutrición, salud y bienestar de las personas, poniendo a su disposición productos de la máxima calidad para cualquier momento del día y para todas las etapas de la vida, y gestionando los negocios de manera que creen valor para la compañía a la vez que para la sociedad.</p>
+		<h2>Visión</h2>
+		<p>Ser la empresa reconocida como líder en nutrición, salud y bienestar a nivel mundial por parte de sus consumidores, empleados, clientes, proveedores y todos los grupos de interés relacionados con la actividad de la compañía.</p>
+		<h2>Valores</h2>
+		<ul>
+			<li>Enfoque en el desarrollo del negocio a largo plazo sin perder de vista la necesidad de obtener continuamente resultados sólidos para nuestros accionistas.</li>
+			<li>Creación de Valor Compartido como la forma fundamental de hacer negocios. Para crear valor de largo plazo para los accionistas debemos crear valor para la sociedad.</li>
+			<li>Compromiso con prácticas empresariales medioambientalmente sostenibles que protejan a las generaciones futuras.</li>
+			<li>Marcar la diferencia en todo lo que hacemos gracias a la pasión por ganar y a la creación de brechas respecto de nuestros competidores con disciplina, rapidez y una ejecución sin errores.</li>
+			<li>Entender qué aporta valor para nuestros consumidores y focalizarnos en proporcionar ese valor en todo lo que hacemos.</li>
+			<li>Servir a nuestros consumidores retándonos continuamente para alcanzar los máximos niveles de calidad en nuestros productos y nunca poniendo en peligro los estándares de seguridad alimentaria.</li>
+			<li>Mejora continua hacia la excelencia como forma de trabajar, evitando los cambios drásticos y repentinos.</li>
+			<li>Visión más contextual que dogmática del negocio, lo cual implica que las decisiones son pragmáticas y basadas en hechos.</li>
+			<li>Respeto y apertura hacia la diversidad de culturas y tradiciones. Nestlé se esfuerza por integrarse en las culturas y tradiciones de cada país en el que está presente, al tiempo que mantiene su fidelidad hacia los valores y principios de la Empresa.</li>
+		</ul>
+	</div>
+        <h:form>
+            <p:stack icon="/img/stack.png" expanded="true">
+                <p:menuitem value="Githab" icon="/img/githab.png" url="https://github.com/Roger0899/Proyecto-Integrador"/>
+            </p:stack>
+        </h:form>
+</h:body>
+</html>
