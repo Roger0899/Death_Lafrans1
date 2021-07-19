@@ -17,7 +17,6 @@ import com.entities.personas.Usuario;
 public class Login_control implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-//	FacesContext jsf= FacesContext.getCurrentInstance();
 	private Usuario user;
 	
 	@EJB
@@ -37,7 +36,6 @@ public class Login_control implements Serializable {
 	}
 	
 	public String iniciarSesion() {
-		System.err.println("gggggggggggggggggggggggggggggggggggggggggg");
 		Usuario us;
 		String redireccion=null;
 		try {
@@ -60,9 +58,7 @@ public class Login_control implements Serializable {
 			Usuario us= (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario");
 			if (us==null) {
 				FacesContext.getCurrentInstance().getExternalContext().redirect("reg_user.jsf");
-			} else {
-
-			}
+			} 
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
