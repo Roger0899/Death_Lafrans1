@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>CONTACTOS</title>
+	<h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
+	<h:outputStylesheet library="CSS" name="cont.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+    <div class="logo">
+        <img src="img/logo_1.png" class="img_logo" alt="proximamente"/>
+        <h1>Death Lafrans</h1>
+    </div>
+    <div class="card">
+        <h:form>
+            <p:growl id="messages"/>
+            <p:menubar>
+                <p:menuitem value="Inicio" outcome="index.xhtml"/>
+                <p:menuitem value="Razón de ser" outcome="mision_vision.xhtml"/>
+                <p:menuitem value="Encargados" outcome="encargados.xhtml"/>
+                <p:menuitem value="Contactos" outcome="contactos.xhtml"/>
+	            <f:facet name="options">
+	                <p:button value="login" icon="/img/login.png" styleClass="ui-button-info" outcome="login.xhtml"/>
+	            </f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+    <div class="cont">
+	    <h1>CONTACTOS</h1>
+    	<h:panelGrid columns="4">
+	        <p:panelGrid columns="2">
+	            <f:facet name="header">
+	                <p:graphicImage value="/img/enc_1.png"/>
+	            </f:facet>
+	
+	            <h:outputText value="Nombre:"/>
+	            <h:outputText value="ALEX CATOTA"/>
+	
+	            <h:outputText value="Departamento:"/>
+	            <h:outputText value="Administrativo"/>
+	
+	            <h:outputText value="Correo:"/>
+	            <h:outputText value="acatotaa@est.ups.edu.ec"/>
+	
+	            <h:outputText value="Numero Dep:"/>
+	            <h:outputText value="253 5784"/>
+	        </p:panelGrid>
+	        
+	        <p:panelGrid columns="2">
+	            <f:facet name="header">
+	                <p:graphicImage value="/img/enc_2.png"/>
+	            </f:facet>
+	
+	            <h:outputText value="Nombre:"/>
+	            <h:outputText value="ERICSSON AGUIRRE"/>
+	
+	            <h:outputText value="Departamento:"/>
+	            <h:outputText value="Marketing"/>
+	
+	            <h:outputText value="Correo:"/>
+	            <h:outputText value="eaguirreg1@est.ups.edu.ec"/>
+	
+	            <h:outputText value="Numero Dep:"/>
+	            <h:outputText value="253 5785"/>
+	        </p:panelGrid>
+	        
+	        <p:panelGrid columns="2">
+	            <f:facet name="header">
+	                <p:graphicImage value="/img/enc_3.png"/>
+	            </f:facet>
+	
+	            <h:outputText value="Nombre:"/>
+	            <h:outputText value="FABRICIO BORJA"/>
+	
+	            <h:outputText value="Departamento:"/>
+	            <h:outputText value="Servicio Cliente"/>
+	
+	            <h:outputText value="Correo:"/>
+	            <h:outputText value="fborjah@est.ups.edu.ec"/>
+	
+	            <h:outputText value="Numero Dep:"/>
+	            <h:outputText value="2535786"/>
+	        </p:panelGrid>
+	        
+	        <p:panelGrid columns="2">
+	            <f:facet name="header">
+	                <p:graphicImage value="/img/enc_4.png"/>
+	            </f:facet>
+	
+	            <h:outputText value="Nombre:"/>
+	            <h:outputText value="ROGER CAPA"/>
+	
+	            <h:outputText value="Departamento:"/>
+	            <h:outputText value="Soporte Técnico"/>
+	
+	            <h:outputText value="Correo:"/>
+	            <h:outputText value="rcapa@est.ups.edu.ec"/>
+	
+	            <h:outputText value="Numero Dep:"/>
+	            <h:outputText value="2535787"/>
+	        </p:panelGrid>
+    	</h:panelGrid>
+    </div>
+    
+	<h:form>
+		<p:stack icon="/img/stack.png" expanded="true">
+			<p:menuitem value="Githab" icon="/img/githab.png" url="https://github.com/Roger0899/Proyecto-Integrador"/>
+		</p:stack>
+	</h:form>
+</h:body>
+</html>

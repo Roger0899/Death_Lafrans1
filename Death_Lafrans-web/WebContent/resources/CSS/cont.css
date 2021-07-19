@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.cont{
+	margin: 50px auto;
+}
+.cont h1{
+	text-align: center;
+	font-size: 60px;
+}
+.cont img{
+	width: 150px;
+	height: 190px;
+}
+.cont table{
+	margin: 0px auto;
+}
+
+.ui-panelgrid.showcase-text-align-center .ui-grid-responsive .ui-panelgrid-cell {
+    text-align: center;
+    
+}
+
+.customPanelGrid .ui-panelgrid-content {
+    align-items: center;
+
+}

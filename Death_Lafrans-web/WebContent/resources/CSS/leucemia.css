@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+.conte{
+	margin: 50px auto;
+	align-items: center;
+}
+.conte > h1 {
+	text-align: center;
+}
+.card{
+    background:#fff;
+    display: table-row;
+    
+}

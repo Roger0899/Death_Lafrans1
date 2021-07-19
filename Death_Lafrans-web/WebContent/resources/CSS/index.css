@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.ind{
+    max-width: 900px; 
+	margin: 50px auto;
+}
+.ind > h1{
+	text-align: center;
+	font-size: 40px;
+}
+
+/*ui-fieldset-legend ui-corner-all ui-state-default*/
+.ui-fieldset-legend{
+	width: 250px;
+	align-items: center;
+}
+.ui-corner-all{
+	text-align: justify;
+}
+/*ui-menuitem ui-menubar-options ui-widget ui-corner-all*/
+
+/*ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-button-info*/
+
+/*ui-button-icon-left ui-icon ui-c pi pi-fw pi-sign-out*/
+
+/*ui-button-text ui-c*/

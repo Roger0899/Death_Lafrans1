@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.card{
+	text-align: center;
+	margin: 9% auto; 
+}
+.fro{
+	border: 3px solid black;
+	display: inline-table;
+	background: #333;
+	color: white;
+	padding: 20px;
+	border-radius: 50px;
+}
+.card .tabla{
+	margin: 25px auto;
+}
+.fro h1{
+	color: white;
+}
+.fro label{
+	background: none;
+}

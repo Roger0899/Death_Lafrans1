@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>BLOQUEO</title>
+	<h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
+	<h:outputStylesheet library="CSS" name="leucemia.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<div class="logo">
+        <img src="img/logo_1.png" class="img_logo" alt="proximamente"/>
+        <h1>Death Lafrans</h1>
+    </div>
+	 <div class="card2">
+        <h:form>
+            <p:growl id="messages"/>
+            <p:menubar>
+				<p:menuitem value="AUDITORIA" outcome="list_aud.xhtml"/>
+				<p:menuitem value="LISTA DE USUARIOS" outcome="list_user.xhtml"/>
+				<p:menuitem value="REGUISTRO" outcome="reg_admin.xhtml"/>
+				<p:menuitem value="CAMBIAR CONTRASEÑA" outcome="contraseña.xhtml"/>
+				<f:facet name="options">
+				    <p:button value="Cerrar Sesion" icon="/img/login.png" styleClass="ui-button-info" />
+				</f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+    <center>
+	<div class="conte">
+		<h1>Listado de usuarios</h1>	
+		<p:dataTable id="reporte" var="datos" value="#{usuarios.usuarios}" rows="15" paginator="true" 
+		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks}" 
+		rowsPerPageTemplate="5,10,15" style="width: 1500px; text-align:center;">
+			<p:column headerText="ID">
+				<h:outputText value="#{datos.identificacion}" />
+			</p:column>
+			<p:column headerText="USUARIO">
+				<h:outputText value="#{datos.nombre}" />
+			</p:column>
+			<p:column headerText="ACCIÓN">
+				<h:outputText value="#{datos.apellido}" />
+			</p:column>
+			<p:column headerText="FECHA">
+				<h:outputText value="#{datos.correo}" />
+			</p:column>
+			<p:column headerText="ANT. INFORMACION">
+				<h:outputText value="#{datos.genero}" />
+			</p:column>
+			<p:column headerText="NUE. INFORMACION">
+				<h:outputText value="#{datos.perfil}" />
+			</p:column>
+			<p:column headerText="ACCIONES">
+				<h:commandLink action="#{usuarios.getEliminar(datos)}" value="Bloquear" rendered="not true"/>
+				&nbsp;
+				<p:button value="Desbloquear" styleClass="rounded-button ui-button-success" rendered="true"/>
+			</p:column>
+		</p:dataTable>
+	</div>
+	</center>
+
+    <h:form>
+        <p:stack icon="/img/stack.png" expanded="true">
+            <p:menuitem value="Githab" icon="/img/githab.png" url="https://github.com/Roger0899/Proyecto-Integrador"/>
+        </p:stack>
+    </h:form>
+</h:body>
+</html>
