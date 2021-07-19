@@ -40,12 +40,15 @@ public class UsuarioDao {
 	
 	@SuppressWarnings("unchecked")
 	public Usuario Iniciar_Sesion(Usuario us) {
+		System.out.println("esdjvblbvsbuvbñoubaervf");
 		Usuario usuario=null;
 		String consulta;
 		try{
 			consulta="SELECT u FROM Usuario u WHERE u.correo = ?1 AND u.clave= ?2";
 			Query query=em.createQuery(consulta);
+			System.out.println(us.getCorreo());
 			query.setParameter(1, us.getCorreo());
+			System.out.println(us.getClave());
 			query.setParameter(2, us.getClave());
 			List<Usuario> lista=query.getResultList();
 			if(!lista.isEmpty()){

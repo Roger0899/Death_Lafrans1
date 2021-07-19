@@ -37,6 +37,7 @@ public class Login_control implements Serializable {
 	}
 	
 	public String iniciarSesion() {
+		System.err.println("gggggggggggggggggggggggggggggggggggggggggg");
 		Usuario us;
 		String redireccion=null;
 		try {
