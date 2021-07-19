@@ -18,6 +18,7 @@ public class R_Usuario {
 	private String correo;
 	private String clave;
 	private int perfil;
+	private boolean estado;
 	
 	@EJB
 	private UsuarioDao usuariodao;
@@ -76,6 +77,15 @@ public class R_Usuario {
 	public void setPerfil(int perfil) {
 		this.perfil = perfil;
 	}
+	
+	public boolean getEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+	
 //	public String r_user() {
 //		Usuario N_User=new Usuario();
 //		N_User.setNombre(nombre);

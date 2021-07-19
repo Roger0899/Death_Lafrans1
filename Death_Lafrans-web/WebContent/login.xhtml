@@ -8,6 +8,7 @@
 	<title>Inicio de Sesion</title>
 	<h:outputStylesheet library="CSS" name="estilos.css"></h:outputStylesheet>
 	<h:outputStylesheet library="CSS" name="regis.css"></h:outputStylesheet>
+	
 </h:head>
 <h:body>
 	<div class="logo">
@@ -30,22 +31,23 @@
     </div>
 	<div class="card">
 	    <h:form styleClass="fro">
+	    	<p:messages autoUpdate="true" showDetail="true"/>
 			<h1>Inicio de Sesion</h1>
 	        <h:panelGrid columns="3" cellpadding="7" styleClass="p-mb-3 tabla">
 				<p:outputLabel for="correo" value="Correo:"/>
-				<p:inputText id="correo" label="Correo" required="true" requiredMessage="El campo es obligatorio">
+				<p:inputText id="correo" label="Correo" required="true" requiredMessage="El campo es obligatorio" value="#{loginn.user.correo}">
 					<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" validateRequired="Debe ser un correo válido"/>
 				</p:inputText>
 				<p:message for="correo"/>
 				
 				<p:outputLabel for="pass" value="Contraseña:"/>
-				<p:inputText id="pass" label="pass" required="true" requiredMessage="El campo es obligatorio">
+				<p:inputText id="pass" label="pass" required="true" requiredMessage="El campo es obligatorio" value="#{loginn.user.clave}">
 					<f:validateLength minimum="8"/>
 				</p:inputText>
 				<p:message for="pass"/>
 	        </h:panelGrid>
 			<div>
-		        <p:commandButton value="Iniciar" update="@form" action="#{remoteValidationView.save}"/>
+		        <p:commandButton value="Iniciar" icon="ui-icon-key" action="#{loginn.iniciarSesion()}"/>
 		        <p:commandButton type="reset" value="Restablecer"/>
 			</div>
 	    </h:form>

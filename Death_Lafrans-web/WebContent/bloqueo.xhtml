@@ -53,9 +53,9 @@
 				<h:outputText value="#{datos.perfil}" />
 			</p:column>
 			<p:column headerText="ACCIONES">
-				<h:commandLink action="#{usuarios.getEliminar(datos)}" value="Bloquear" rendered="not true"/>
+				<h:button styleClass="rounded-button ui-button-success" value="Bloquear" rendered="#{datos.estado}"/>
 				&nbsp;
-				<p:button value="Desbloquear" styleClass="rounded-button ui-button-success" rendered="true"/>
+				<p:button styleClass="rounded-button ui-button-success" value="Desbloquear"  rendered="not #{datos.estado}"/>
 			</p:column>
 		</p:dataTable>
 	</div>
